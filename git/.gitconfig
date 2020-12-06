@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[core]
+	editor = vim
+[user]
+	name = Hugo Belot-Deloro
+	email = hugo.belot-deloro@epita.fr

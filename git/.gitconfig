@@ -1,7 +1,12 @@
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = kak
+	excludesFile = ~/.gitignore
 [user]
 	name = Hugo Belot-Deloro
 	email = hugo.belot-deloro@epita.fr
+[alias]
+	graph = log --all --oneline --graph --decorate
+[init]
+	defaultBranch = master

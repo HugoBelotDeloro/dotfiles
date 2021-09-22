@@ -142,9 +142,7 @@ ex ()
   fi
 }
 export PATH=$PATH:/home/hugo/bin
-export JAVA_HOME="/opt/jdk-14.0.2"
+export JAVA_HOME='/home/hugo/.jdks/openjdk-16/'
 export PATH=$PATH:${JAVA_HOME}/bin
 export PATH=$PATH:~/zig
 eval "$(starship init bash)"
-
-export PS2=﬌

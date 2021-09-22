@@ -43,7 +43,7 @@ endif
 
 "" General
 set number	" Show line numbers
-set cursorline  " Highlight cursor line
+"set cursorline  " Highlight cursor line
 set clipboard=unnamed
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix

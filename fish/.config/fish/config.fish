@@ -24,6 +24,7 @@ abbr -a gp "git push"
 abbr -a gpt "git push --follow-tags"
 abbr -a gg "git graph"
 abbr -a gcsm "git commit -sm"
+abbr -a gst "git stash"
 
 alias alert "echo -ne '\a'"
 alias clang-format-10 "clang-format"

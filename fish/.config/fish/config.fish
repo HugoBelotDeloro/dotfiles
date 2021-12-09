@@ -70,6 +70,7 @@ function kitty-help
     echo "Windows:"
     printf "\t%s\n"\
     "C-S-enter: new window"\
+    "C-S-\$: new window (horizontal split)"\
     "C-S-w: close window"\
     "C-S-up: previous window"\
     "C-S-down: next window"

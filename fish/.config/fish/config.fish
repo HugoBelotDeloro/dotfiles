@@ -17,19 +17,29 @@ abbr -a g+++ "g++ -Wextra -Wall -Werror -std=c++17 -pedantic"
 abbr -a clangpp "clang++ -Wextra -Wall -Werror -std=c++17 -pedantic"
 
 # Git
-abbr -a gs "git status"
-abbr -a ga "git add"
-abbr -a gap "git add -p"
-abbr -a gp "git push"
-abbr -a gpt "git push --follow-tags"
-abbr -a gg "git graph"
-abbr -a gcsm "git commit -sm"
-abbr -a gst "git stash"
-abbr -a gsw "git switch"
-abbr -a gcm "git commit -m"
-abbr -a gca "git commit --amend"
-abbr -a gcane "git commit --amend --no-edit"
-abbr -a g "git"
+if type -q git
+  abbr -a gs "git status"
+  abbr -a ga "git add"
+  abbr -a gap "git add -p"
+  abbr -a gp "git push"
+  abbr -a gpt "git push --follow-tags"
+  abbr -a gg "git graph"
+  abbr -a gcsm "git commit -sm"
+  abbr -a gst "git stash"
+  abbr -a gsw "git switch"
+  abbr -a gcm "git commit -m"
+  abbr -a gca "git commit --amend"
+  abbr -a gcane "git commit --amend --no-edit"
+  abbr -a g "git"
+end
+
+# Exa
+if type -q exa
+  alias ls   "exa --classify"
+  alias la   "exa --classify --all"
+  alias lla  "exa --classify --all --long --header"
+  alias tree "exa --classify --all --long --header --tree"
+end
 
 alias alert "echo -ne '\a'"
 alias clang-format-10 "clang-format"
@@ -76,4 +86,14 @@ function kitty-help
     "C-S-down: next window"
 end
 
+function fix-colors -d "Fix the terminal's colors"
+  echo -ne "\033[0m"
+end
+
 starship init fish | source
+
+if type -q rbenv
+  status --is-interactive; and rbenv init - fish | source
+end
+
+set -x N_PREFIX "$HOME/n"; contains "$N_PREFIX/bin" $PATH; or set -a PATH "$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

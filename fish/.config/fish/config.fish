@@ -29,7 +29,9 @@ if type -q git
   abbr -a gsw "git switch"
   abbr -a gcm "git commit -m"
   abbr -a gca "git commit --amend"
-  abbr -a gcane "git commit --amend --no-edit"
+  abbr -a gcan "git commit --amend --no-edit"
+  abbr -a gd "git diff"
+  abbr -a gdc "git diff --cached"
   abbr -a g "git"
 end
 

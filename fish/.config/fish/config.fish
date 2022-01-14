@@ -23,6 +23,8 @@ if type -q git
   abbr -a gap "git add -p"
   abbr -a gp "git push"
   abbr -a gpt "git push --follow-tags"
+  abbr -a gf "git fetch"
+  abbr -a gfp "git fetch --prune"
   abbr -a gg "git graph"
   abbr -a gcsm "git commit -sm"
   abbr -a gst "git stash"

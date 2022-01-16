@@ -68,7 +68,9 @@ function tmux-help
     "Other key bindings should be default"
 end
 
-function kitty-help
+# Kitty
+if [ $TERM = 'xterm-kitty' ]
+  function kitty-help
     echo "Font:"
     printf "\t%s\n" \
     "C-S-minus: decrease font size"\
@@ -88,6 +90,9 @@ function kitty-help
     "C-S-w: close window"\
     "C-S-up: previous window"\
     "C-S-down: next window"
+  end
+
+  abbr -a icat "kitty +kitten icat"
 end
 
 function fix-colors -d "Fix the terminal's colors"
